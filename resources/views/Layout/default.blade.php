@@ -9,7 +9,15 @@
     <title>@yield('title', 'Curso de Laravel-9')</title>
 </head>
 <body style='background-image: url("{{Vite::asset('resources/img/fundo-login5.png')}}")'>
+<header>
     @yield('header')
-    @yield('content')
+</header>
+@yield('content')
+
+
+<footer>
+    @yield('footer')
+</footer>
+
 </body>
 </html>
