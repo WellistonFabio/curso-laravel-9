@@ -1,4 +1,4 @@
-import './bootstrap';
+// import './bootstrap';
 import.meta.glob([
     '../img/**',
 ]);
@@ -21,8 +21,8 @@ function Atualizar(url) {
 
 function focoItem(item){
     const styliItem = item.parentNode.querySelector("label")
-    console.log(styliItem)
-    if(item.value){
+    // console.log(item.name)
+    if(item.value && item.name != '_token'){
         if (styliItem.classList != "itemInput"){styliItem.classList.add("itemInput")}
     }else{
         if (styliItem.classList.value == "itemInput"){styliItem.classList.remove("itemInput")}

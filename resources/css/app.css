@@ -29,6 +29,7 @@
 }
 
 body{
+    /*background-color: var(--Contener3);*/
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -37,31 +38,73 @@ body{
     height: 100vh;
 }
 
-/*Header - Nav --Cabeçario*/
-.banner{
+.container {
+    box-shadow: 0px 10px 1.4em rgba( 0, 0, 0, .4);
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--light-color);
+    border-radius: 10px;
+}
+
+.containerPage{
+    width: 600px;
+    height: 400px;
+}
+
+.space-title {
     width: 100%;
-    height: 100%;
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    background-color: var(--Contener2);
+    border-radius: 10px 10px 0px 0px;
+}
+
+.text-title {
+    color: var(--textTitulo);
+    text-shadow: 3px 3px 5px black;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.sub-title {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 3px black;
+    color: var(--textSubTitulo);
+}
+
+/*Hearder  -- Cabeçario*/
+
+.banner {
+    width: 100%;
+    height: 100px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
     text-align: center;
 }
 
-nav{
+nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     max-height: 100px;
     height: 100%;
-    box-shadow: 0 3px 10px var(--light-color2);
+    box-shadow: 0 3px 10px #464646;
     z-index: 99;
 }
 
-nav .navbar{
+nav .navbar {
     display: flex;
     max-width: 1290px;
-    width: 100px;
+    width: 100%;
     height: 100%;
     align-items: center;
     justify-content: space-between;
@@ -69,23 +112,26 @@ nav .navbar{
     padding: 0 14px;
 }
 
-nav a{
+nav a {
     text-decoration: none;
 }
-nav li{
+
+nav li {
     list-style: none;
 }
 
-.navbar .logo a{
+.navbar .logo a {
     font-size: 1.2rem;
     color: var(--light-color2);
     text-shadow: 3px 3px 5px var(--light-color2);
     font-weight: 500;
 }
-nav .navbar .nav-menu{
+
+nav .navbar .nav-menu {
     height: 100%;
 }
-.nav-menu .menu{
+
+.nav-menu .menu {
     width: 500px;
     height: 100%;
     display: flex;
@@ -93,11 +139,11 @@ nav .navbar .nav-menu{
     justify-content: space-between;
 }
 
-.nav-menu .menu li{
+.nav-menu .menu li {
     height: 100%;
 }
 
-.nav-menu .menu li a{
+.nav-menu .menu li a {
     height: 100%;
     display: flex;
     align-items: center;
@@ -108,7 +154,7 @@ nav .navbar .nav-menu{
     font-weight: 500;
 }
 
-.menu .submenu{
+.menu .submenu {
     position: absolute;
     top: 100px;
     left: 0;
@@ -118,30 +164,28 @@ nav .navbar .nav-menu{
     box-shadow: 0 1px 2px var(--light-color2);
     border-radius: 4px 4px 4px 4px;
     line-height: 40px;
-
     display: none;
 }
 
-.menu .submenu li{
+.menu .submenu li {
     padding: 0 22px;
     border-bottom: 1px solid rgba(126, 125, 125, 0.2);
 }
 
-.nav-menu .menu li:hover .htmlCss-sub-menu{
+.nav-menu .menu li:hover .htmlCss-sub-menu {
     display: block;
 }
 
-.nav-menu .menu li a:hover
-{
+.nav-menu .menu li a:hover {
     text-shadow: 3px 3px 5px #71dd8a;
 }
-.navbar .menu li .submenu .more-sub-menu{
+
+.navbar .menu li .submenu .more-sub-menu {
     position: absolute;
     top: 0;
     left: 100%;
     display: none;
     width: 200px;
-
     z-index: 2;
     background-color: var(--Contener3);
     box-shadow: 0 1px 2px var(--light-color2);
@@ -149,23 +193,23 @@ nav .navbar .nav-menu{
     line-height: 40px;
 }
 
-.menu li .submenu .more:hover .more-sub-menu{
+.menu li .submenu .more:hover .more-sub-menu {
     display: block;
 }
 
 .menu li:hover .htmlcss-arrow,
-.menu li:hover .js-arrow{
+.menu li:hover .js-arrow {
     transform: rotate(90deg);
 }
 
-.menu li a span{
+.menu li a span {
     margin-left: 10px;
     box-shadow: none;
     transition: all 0.3s ease;
 }
 
-.bootom{
-    background-color:var(--light-color2);
+.bootom {
+    background-color: var(--light-color2);
     padding: 5px 20px;
     border-radius: 25px;
     color: var(--Contener3);
@@ -173,112 +217,152 @@ nav .navbar .nav-menu{
     box-shadow: 3px 3px 10px rgba( 0, 0, 0, 1);
 }
 
-.bootom:hover{
-    background-color:var(--light-color2);
+.bootom:hover {
+    background-color: var(--light-color2);
     color: var(--Contener);
 }
 
-.bootom:active{
+.bootom:active {
     box-shadow: none;
 }
 
-/*section -- telas de conteudo*/
-section{
-    color: black;
-    width: 100%;
-    position: fixed;
-    top: 120px;
+/*footer -- Rodapé*/
+
+footer {
+    position: absolute;
+    bottom: 0;
     left: 0;
+    background-color: #24252a;
+    box-shadow: 0px -3px 10px #464646;
+    color: #8c8c8c;
+    font-size: .8rem;
+    font-weight: 500;
+    width: 100%;
+    height: 60px;
+    padding: 5px 14px;
+}
+
+footer .border-top {
+    padding-top: 10px;
+    border-top: 1px solid rgba(143, 140, 140);
+}
+
+/*Início pagina de Businesses*/
+.containerBusinesses{
+    width: 1200px;
+    height: 600px;
+}
+
+
+
+/*Início pagina de loginho*/
+.containerLogin{
+    width: 430px;
+    height: 320px;
+}
+
+.alignment{
+    padding: 10px;
+    margin-top: 5px;
+    width: 410px;
+    height: 150px;
+    border: 2px solid rgba(0, 0, 0, .14);
+    display: flex;
+}
+
+.alignment .appetizer{
+    padding: 5px;
+    width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    height: 79vh;
 }
 
-.space-titulo{
-    width: 100%;
-    height: 50px;
+.alignment .logo{
+    width: 50%;
+    height: 100%;
+    padding: 5px;
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-color: var(--Contener2);
-    border-radius: 10px 10px 0px 0px;
-}
-.text-titulo{
-    color: var(--textTitulo);
-    text-shadow: 3px 3px 5px black;
-    font-size: 1.3rem;
-    font-weight: 600;
-}
-.sub-titulo{
-    margin-top: 10px;
-    font-size: 1rem;
-    font-weight: 500;
-    text-shadow: 1px 1px 3px black;
-    color: var(--textSubTitulo);
 }
 
-/*input com Label e messagem de erro*/
-.input{
-    margin-top: 15px;
-    margin-bottom: 22px;
+.login-msg {
+    font-size: .8rem;
+    color: var(--textTitulo);
+    text-shadow: black 0.1em 0.1em 0.2em;
+}
+
+#forgot-pass {
+    margin-top: 0;
+    margin-right: .5rem;
+    margin-bottom: -.4rem;
+    text-align: right;
+    display: block;
+    font-size: .7em;
+}
+
+#forgot-pass:hover {
+    color: mediumblue;
+    font-weight: bold;
+    transition: .5s;
+}
+
+/*input do sistema*/
+.appetizer .input{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input {
+    margin: 15px 0 5px 0;
     position: relative;
 }
 
 input,
 textarea,
 select,
-button{
+button {
     /* reset appeareance */
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
-
     /* box */
     width: 100%;
-
     /*padding: 10px 0;*/
-
     border: none;
     border-bottom: 1px solid var(--primary-color);
-
     background-color: transparent;
     outline: none;
-
     font-size: 1em;
 }
 
-input ~label,
-textarea ~label,
-select ~label{
+input~label,
+textarea~label,
+select~label {
     position: absolute;
     top: 2px;
     left: 0;
     transition: .4s;
 }
 
-input:focus ~label,
-textarea:focus ~label,
-select:focus ~label,
-.itemInput
-{
+input:focus~label,
+textarea:focus~label,
+select:focus~label,
+.itemInput {
     transform: translateY(-18px);
     font-size: 0.8em;
     letter-spacing: 0.1em;
 }
 
-.error {
-    position: absolute;
-    font-size: .65em;
-    font-weight: 500;
-}
-
 .input span.error {
+    font-size: .55em;
+    font-weight: 500;
     display: flex;
-    padding: 0;
+    padding: 1px;
     background-color: rgba(255, 0, 0, 0.1);
 }
 
@@ -288,32 +372,38 @@ select:focus ~label,
     margin-top: -1px;
 }
 
-input[type="submit"] {
+input[type="submit"],
+button[type="submit"]{
     text-align: center;
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 1.3rem;
+    font-size: 1rem;
     border: none;
-    height: 40px;
+    height: 30px;
     border-radius: 20px;
     margin-top: -10px;
     color: #fff;
     background-color: #08558b;
     cursor: pointer;
-    width: 150px;
+    width: 110px;
     margin-left: auto;
     box-shadow: 2px 2px 4px rgba( 0, 0, 0, 1);
     text-shadow: 1px 1px 4px rgba( 0, 0, 0, 1);
 }
 
-.submit{
+.submit {
+    margin-left: 10px;
     margin-top: 10px;
+    margin-bottom: 10px;
 }
-#btn-submit:hover {
+
+#btn-submit:hover,
+input[type="submit"]:hover{
     background-color: #117a8b;
 }
 
-#btn-submit:active {
+#btn-submit:active,
+input[type="submit"]:active{
     box-shadow: none;
 }
 
@@ -333,106 +423,5 @@ input[type="submit"] {
     box-shadow: 2px 2px 4px rgba( 0, 0, 0, 1);
     text-shadow: 1px 1px 4px rgba( 0, 0, 0, 1);
 }
-
-
-/*Início section -- main */
-/*section -- telas de conteudo*/
-section{
-    color: black;
-    width: 100%;
-    position: fixed;
-    top: 120px;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: center;
-    height: 100vh;
-}
-
-.container{
-    width: 1600px;
-    height: 700px;
-    box-shadow: 0px 10px 1.4em rgba( 0, 0, 0, .4);
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    flex-direction: column;
-    background-color: var(--light-color);
-    border-radius: 10px;
-    margin-top: -200px;
-
-}
-
-/*Tabela de usuarios*/
-.container .lista{
-    width: 100%;
-}
-.container table{
-    background-color: rgba(0, 0, 0, .2) ;
-    width: 100%;
-    margin: 0px auto;
-    border-collapse: collapse;
-    overflow-y: scroll;
-}
-
-.container table .titulo{
-    font-weight: 600;
-    border: none;
-    background-color: #597d84;
-    box-shadow: 0px 3px .4em rgba( 0, 0, 0, .4);
-    text-shadow: 3px 3px 5px var(--light-color2);
-}
-.center{
-    text-align: center;
-}
-
-tr:nth-child(odd) {
-    background-color:rgba(39, 39, 39, 0.10);
-}
-tr:nth-child(even) {
-    background-color: rgba(119, 119, 119, 0.04);
-}
-
-.teste:hover{
-    background-color: rgba(122, 85, 85, 0.30);
-}
-
-
-
-
-
-
-/*Final section -- main */
-
-
-
-
-
-
-
-
-
-/*footer -- Rodapé*/
-footer{
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    background-color: #24252a;
-    box-shadow: 0px -3px 10px #464646;
-    color: #8c8c8c;
-    font-size: .8rem;
-    font-weight: 500;
-    width: 100%;
-    height: 60px;
-    padding: 5px 14px;
-}
-
-footer .border-top{
-    padding-top: 10px;
-    border-top:  1px solid rgba(143, 140, 140);
-}
-
 
 

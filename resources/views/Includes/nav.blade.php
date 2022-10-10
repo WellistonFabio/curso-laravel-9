@@ -1,10 +1,10 @@
-<nav class="banner">
+<nav class="banner" style='background-image: url("{{Vite::asset('resources/img/Banner.png')}}")'>
     <div class="navbar">
         <div class="logo"><a href="#">Usuário: </a></div>{{--        {{auth()->user()->name}}--}}
         <div class="nav-menu">
             <ul class="menu">
                 <li>
-                    <a href="#">Home</a>
+                    <a href="{{ route('home') }}">Home</a>
                 </li>
                 <li><a href="#">Serviços<span class="htmlcss-arrow js-arrow">→</span></a>
                     <ul class="htmlCss-sub-menu submenu">
