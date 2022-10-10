@@ -1,6 +1,6 @@
 <nav class="banner">
     <div class="navbar">
-        <div class="logo"><a href="#">Usuário: {{auth()->user()->name}}</a></div>
+        <div class="logo"><a href="#">Usuário: </a></div>{{--        {{auth()->user()->name}}--}}
         <div class="nav-menu">
             <ul class="menu">
                 <li>
@@ -8,6 +8,14 @@
                 </li>
                 <li><a href="#">Serviços<span class="htmlcss-arrow js-arrow">→</span></a>
                     <ul class="htmlCss-sub-menu submenu">
+                        <li class="more">
+                                <span>
+                                    <a href="#">Businesses →</a>
+                                </span>
+                            <ul class="more-sub-menu submenu">
+                                <li><a href="{{ route('business.index') }}">cadastro</a></li>
+                            </ul>
+                        </li>
                         <li class="more">
                                 <span>
                                     <a href="#">Usuário →</a>
@@ -41,7 +49,7 @@
             </ul>
         </div>
         <div class="nav-sessao">
-            <a href="{{ route('User.Logout') }}" class="bootom">Deslogar</a>
+            <a href="" class="bootom">Deslogar</a>{{--            {{ route('User.Logout') }}--}}
         </div>
     </div>
 </nav>

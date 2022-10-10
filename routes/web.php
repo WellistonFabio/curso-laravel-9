@@ -15,7 +15,8 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/ver',[BusinessController::class, 'index'])->name('ver');
+Route::get('businesses',[BusinessController::class, 'index'])->name('business.index');
+Route::post('businesses',[BusinessController::class, 'store'])->name('business.store');
 
 Route::get('/posts',[PostController::class, 'index'])->name('post.index');
 Route::get('/posts/{post}',[PostController::class, 'show'])->name('post.show');

@@ -5,7 +5,7 @@
 @section('content')
     <section>
         <div class="container">
-            <h2>teste de tive</h2>
+            <h2>hello World</h2>
         </div>
     </section>
 @endsection
