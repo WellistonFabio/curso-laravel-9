@@ -18,10 +18,16 @@ use Illuminate\Support\Facades\Route;
 Route::get('businesses',[BusinessController::class, 'index'])->name('business.index');
 Route::post('businesses',[BusinessController::class, 'store'])->name('business.store');
 
+
 Route::get('/posts',[PostController::class, 'index'])->name('post.index');
 Route::get('/posts/{post}',[PostController::class, 'show'])->name('post.show');
 
 Route::get('/user/{user}',[UserController::class, 'show'])->name('User.show');
+
+Route::get('/usuario', function () {
+    return view('usuarios/usuario');
+})->name('usuarios.usuario');
+
 
 Route::get('/', function () {
     return view('home');
