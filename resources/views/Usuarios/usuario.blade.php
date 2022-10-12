@@ -9,13 +9,15 @@
     <title>Document</title>
 </head>
 <body style='background-image: url("{{Vite::asset('resources/img/fundo-login5.png')}}")'>
-<div class="container containerLogin">
-    <div class="space-title bg-cyan-600">
-        <h3 class="text-pink-900]">teste de login</h3>
+    <div class="container containerLogin">
+        <div class="space-title bg-gradient-to-r from-indigo-500 to-gray-800">
+            <h3 class="text-title text-lg text-red-50 font-normal tracking-wide ">Bem vindo ao Sistema</h3>
+        </div>
+        <h5 class="sub-title text-sm font-norma tracking-wide mt-1 text-zinc-700">Logando no sistema</h5>
+        <form action="" method="post">
+
+
+        </form>
     </div>
-</div>
-
-
-
 </body>
 </html>
